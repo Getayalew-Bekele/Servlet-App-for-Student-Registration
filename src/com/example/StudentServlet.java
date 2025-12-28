@@ -8,8 +8,8 @@ import javax.servlet.http.*;
 public class StudentServlet extends HttpServlet {
 
     private static final String JDBC_URL = "jdbc:mariadb://localhost:3306/studentdb";
-    private static final String JDBC_USER = "root";       // change as needed
-    private static final String JDBC_PASS = "maria123";   // change as needed
+    private static final String JDBC_USER = "root";      
+    private static final String JDBC_PASS = "maria123";   
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -17,8 +17,6 @@ public class StudentServlet extends HttpServlet {
 
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
-
-        // Get form parameters
         String idStr = request.getParameter("id");
         String name = request.getParameter("name");
         String email = request.getParameter("email");
